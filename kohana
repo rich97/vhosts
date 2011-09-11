@@ -1,0 +1,18 @@
+<VirtualHost *:80>
+
+	ServerName kohana
+	ServerAdmin rich@localhost
+
+	DocumentRoot /home/richard/code/webroot/kohana/kohana/htdocs
+	<Directory   /home/richard/code/webroot/kohana/kohana/htdocs/>
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride All
+		Order allow,deny
+		allow from all
+	</Directory>
+
+	LogLevel warn
+	ErrorLog  ${APACHE_LOG_DIR}/kohana-error.log
+	CustomLog ${APACHE_LOG_DIR}/kohana-access.log combined
+
+</VirtualHost>
